@@ -1,0 +1,407 @@
+\documentclass[a4,11pt]{article}
+% reqno tells it to put equation labels on the right
+% 10pt and 12pt are also options
+\usepackage[left=1in,right=1in,top=1.2in,bottom=1in]{geometry}
+
+\usepackage{array}
+\usepackage{thmbox}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{minitoc}
+\usepackage{longtable}
+\usepackage{xeCJK}
+\usepackage{longtable}
+\usepackage{ltablex,makecell}
+
+\usepackage[unicode=true,colorlinks,citecolor=blue,urlcolor=blue,linkcolor=black,filecolor=blue,pdfnewwindow=true]{hyperref}
+\usepackage{parcolumns}
+\usepackage{fancyhdr,lastpage}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{comment}
+
+\setlength{\parskip}{8pt plus 2pt minus 2pt}
+\setlength{\parindent}{0pt}
+
+
+
+\usepackage[font=small,labelfont=bf]{caption}
+\graphicspath{{figures/}}
+
+\usepackage{xeCJK}
+
+
+\makeatletter
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+\makeatother
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}[1]{>{\arraybackslash}m{#1}}
+
+\begin{document}
+\pagestyle{fancy}
+\lhead{SPHERIC Beijing 2017}
+\chead{会议资料汇总}
+\rhead{第\ \thepage\ 页, ~共\ \protect\pageref{LastPage}\ 页} 
+\headheight 20pt
+
+\begin{center}
+{\LARGE\bf SPHERIC Beijing 2017 会议资料汇总\footnote{请使用\href{http://get.adobe.com/reader}{Adobe reader}打开本电子文档。本电子文档中的\textcolor{blue}{蓝色}文字均为超链接，鼠标点击可打相应的文件夹或文件。}}\\
+\vspace{1.5em}
+%{\Large\bf 整理人：周吕文}
+\end{center}
+
+
+
+\section{\href{run:materials/handbook/}{会议手册}}
+\begin{itemize}
+\item \textbf{完整版} \hspace{0.7em}\href{materials/handbook/full.pdf}{full.pdf}：包含会议摘要，目录和会议日程中有相应超链接。含空白页以使每章从奇数页开始。
+\item \textbf{打印版} \href{materials/handbook/print.pdf}{print.pdf}：与完整版相比，去掉了会议摘要和超链接，但包含封面尾页。
+\item \textbf{网页版} \hspace{0.5em}\href{materials/handbook/web.pdf}{web.pdf}：与完整版相比，去掉了会议摘要，且不含空白页。
+\end{itemize}
+
+
+\section{\href{run:materials/proceedings/}{会议记要}}
+\begin{itemize}
+\item \href{materials/proceedings/proceedings.pdf}{\bf proceedings.pdf}：会议记要的主体部分为会议论文集。
+\end{itemize}
+
+\section{\href{run:materials/training/}{培训资料}}
+\begin{itemize}
+\item \textbf{培训讲议} \href{materials/training/notes.pdf}{notes.pdf}：SPH Training Day - DualSPHysics code and DesignSPHysics
+\item \textbf{培训材料} \href{run:materials/training/Material.zip}{Material.zip}：Material needed for the course of SPH training day
+\end{itemize}
+
+
+\section{\href[page=29]{materials/handbook/full.pdf}{摘要} \& \href{run:materials/slides/}{幻灯片}}
+
+\begin{tabularx}{\textwidth}{M{2em}XM{5em}}%M{4em}
+%\begin{tabular}{|c|c|c|}
+\hlinewd{1.5pt}
+\textbf{编号} &\centering\textbf{题目（摘要）}  & \textbf{幻灯片}\tabularnewline%& \textbf{摘要}
+\hlinewd{1.5pt}
+\vspace{-2.5em}1.1 &\href[page=32]{materials/handbook/full.pdf}{DualSPHysics: a numerical tool to simulate real breakwaters.\newline F. Zhang, S. P. Shang, Alejandro Crespo, José Dominguez, Moncho Gomez-Gesteira, Corrado Altomare, Andrea Marzeddu}
+%&\vspace{-2.5em}\href{materials/abstract/22.pdf}{22.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-2.5em}1.2 &\href[page=34]{materials/handbook/full.pdf}{High speed water impacts of fat plates in different ditching configurations through a Riemann-ALE SPH model. \newline S. Marrone, A. Colagrossi, M. De Leffe, L. Chiron, D. Le Touze}
+%&\vspace{-2.5em}\href{materials/abstract/01.pdf}{01.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-1.5em}1.3 &\href[page=35]{materials/handbook/full.pdf}{Application of improved SPH solid-wall boundary model in missile water exiting.\newline H. L. Zheng, H. F. Qiang, F. Z. Chen, C. Shi}
+%&\vspace{-1.5em}\href{materials/abstract/36.pdf}{36.pdf} 
+& \vspace{-1.5em}/\\
+
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-2.5em}2.1 & \href[page=36]{materials/handbook/full.pdf}{Multiphase Godunov-typed smoothed particle hydrodynamics method with approximate Riemann solvers. \newline Z. W. Cai, Z. Zong, L. Zhou, Z. Chen, C. Tiao}
+%&\vspace{-2.5em}\href{materials/abstract/24.pdf}{24.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session02/2-1.pdf}{\hphantom{0}2-1.pdf}\\
+\hline
+\vspace{-1.5em}2.2 &\href[page=37]{materials/handbook/full.pdf}{A two-phase SPH model for sediment laden flows. \newline  H. B. Shi, X. P. Yu}
+%&\vspace{-1.5em}\href{materials/abstract/31.pdf}{31.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session02/2-2.pdf}{\hphantom{0}2-2.pdf}\\
+\hline
+\vspace{-2.5em}2.3 &\href[page=38]{materials/handbook/full.pdf}{Numerical simulation of water-entry problems using an improved multiphase SPH method. \newline  H. Cheng, A. M. Zhang, F. R. Ming}
+%&\vspace{-02.5em}\href{materials/abstract/39.pdf}{39.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session02/2-3.pdf}{\hphantom{0}2-3.pdf}\\
+\hline
+\vspace{-1.5em}2.4 & \href[page=39]{materials/handbook/full.pdf}{Stable sharp interface method for SPH. \newline  M. Y. Zhang}
+%&\vspace{-1.5em}\href{materials/abstract/21.pdf}{21.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session02/2-4.pdf}{\hphantom{0}2-4.pdf}\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}3.1 & \href[page=40]{materials/handbook/full.pdf}{Aircraft tire water spray simulation using SPH. \newline Y. K. Hu, Y. F. Rong, D. X. Leng, F. Xu, X. Y. Gao, R. G. Cao, W. Ding, J. Lv}
+%&\vspace{-2.5em}\href{materials/abstract/30.pdf}{30.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session03/3-1.pdf}{\hphantom{0}3-1.pdf}\\
+\hline
+\vspace{-2.5em}3.2 & \href[page=41]{materials/handbook/full.pdf}{Numerical simulation of the damage of multi-floor buildings by conical projectile with SPH method. \newline  H. F. Qiang, X. Y. Sun, F. Z. Chen, G. X. Zhang}
+%&\vspace{-2.5em}\href{materials/abstract/37.pdf}{37.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-2.5em}3.3 & \href[page=42]{materials/handbook/full.pdf}{Corrected smoothed particle hydrodynamics for simulating failure progress of model-scale ice. \newline  X. Zheng, N. B. Zhang, Q. W. Ma}
+%&\vspace{-2.5em}\href{materials/abstract/41.pdf}{41.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-2.5em}3.4 & \href[page=43]{materials/handbook/full.pdf}{Numerical study of the mechanism of explosive/impact welding using an improved SPH method. \newline  Z. L. Zhang, M. B. Liu}
+%&\vspace{-2.5em}\href{materials/abstract/57.pdf}{57.pdf} 
+& \vspace{-2.5em}/\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}4.1 & \href[page=45]{materials/handbook/full.pdf}{SPH numerical investigation of oscillating characteristics of hydraulic jumps at an abrupt drop. \newline Diana De Padova, Michele Mossa, Stefano Sibilla}
+%&\vspace{-2.5em}\href{materials/abstract/14.pdf}{14.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session04/4-1.pdf}{\hphantom{0}4-1.pdf}\\
+\hline
+\vspace{-1.5em}4.2 & \href[page=46]{materials/handbook/full.pdf}{An SPH simulation of bubble cavity evolution on underwater movement. \newline J. R. Shao, M. B. Liu}
+%&\vspace{-2.5em}\href{materials/abstract/20.pdf}{20.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session04/4-2.pdf}{\hphantom{0}4-2.pdf}\\
+\hline
+\vspace{-2.5em}4.3 & \href[page=47]{materials/handbook/full.pdf}{The $\delta$ALE-SPH model: an improved $\delta$-SPH scheme containing particle shifting and ALE formulation. \newline P. N. Sun, A. M. Zhang, A. Colagrossi, S. Marrone, M. Antuono}
+%&\vspace{-2.5em}\href{materials/abstract/40.pdf}{40.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session04/4-3.pdf}{\hphantom{0}4-3.pdf}\\
+\hline
+\vspace{-2.5em}4.4 & \href[page=49]{materials/handbook/full.pdf}{SPH numerical simulation of lift-off by impact of sand particles on flat sand bed. \newline  J. Zhao, A. F. Jin, Maimtimin Geni, X. J. Ma}
+%&\vspace{-2.5em}\href{materials/abstract/44.pdf}{44.pdf} 
+& \vspace{-2.5em}/\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}5.1 & \href[page=50]{materials/handbook/full.pdf}{A comparative study of SPH and MPM in modeling mixed-mode failure in rocks. \newline Sam Raymond, Bruce Jones, John Williams}
+%&\vspace{-2.5em}\href{materials/abstract/04.pdf}{04.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session05/5-1.pdf}{\hphantom{0}5-1.pdf}\\
+\hline
+\vspace{-2.5em}5.2 & \href[page=51]{materials/handbook/full.pdf}{A SPH investigation of soil plastic behaviour with Mohr-Coulomb constitutive model. \newline S. H. Zhao, Ha H. Bui, Vincent Lemiale, Giang D. Nguyen}
+%&\vspace{-2.5em}\href{materials/abstract/05.pdf}{05.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session05/5-2.pdf}{\hphantom{0}5-2.pdf}\\
+\hline
+\vspace{-1.5em}5.3 & \href[page=52]{materials/handbook/full.pdf}{A robust approach to model rock fracture with SPH. \newline Y. N. Wang, Ha H. Bui, Giang D. Nguyen, P. G. Ranjith}
+%&\vspace{-1.5em}\href{materials/abstract/06.pdf}{06.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session05/5-3.pdf}{\hphantom{0}5-3.pdf}\\
+\hline
+\vspace{-1.5em}5.4 & \href[page=53]{materials/handbook/full.pdf}{An elasto-plastic-$\mu$(I) SPH model for landslide induced debris flow. \newline  W. T. Zhang, Y. An, Q. Q. Liu}
+%&\vspace{-2.5em}\href{materials/abstract/33.pdf}{33.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session05/5-4.pdf}{\hphantom{0}5-4.pdf}\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}6.1 & \href[page=54]{materials/handbook/full.pdf}{Overview of SPH-ALE applications for hydraulic turbines in ANDRITZ Hydro. Jean-Christophe Marongiu, Magdalena Neuhauser, Martin Rentschler, Etienne Parkinson}
+%&\vspace{-2.5em}\href{materials/abstract/10.pdf}{10.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-2.5em}6.2 & \href[page=55]{materials/handbook/full.pdf}{Numerical and experimental investigation of two porous wave - breaking structures. \newline W. Q. Hu, Q. Fan, J. M. Zhan, W. H. Cai}
+%&\vspace{-2.5em}\href{materials/abstract/48.pdf}{48.pdf} 
+& \href{run:materials/slides/session06/6-2.pdf}{\hphantom{0}6-2.pdf}\newline\vspace{-2.5em}\href{run:materials/slides/session06/6-2.pdf}{\hphantom{0}6-2.pdf\hphantom{x.}}\\
+\hline
+\vspace{-2.5em}6.3 & \href[page=56]{materials/handbook/full.pdf}{SPH for the interaction between tsunami wave and upright cylindrical groups. \newline J. J. Li, L. Tian, Y. S. Yang, L. C. Qiu, Y. Han}
+%&\vspace{-2.5em}\href{materials/abstract/46.pdf}{46.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session06/6-3.pdf}{\hphantom{0}6-3.pdf}\\
+\hline
+\vspace{-2.5em}6.4 & \href[page=57]{materials/handbook/full.pdf}{Hydrodynamics characteristics of land hinged oscillating wave surge converter with SPH method. D. H. Zhang, Y. X. Shi, C. Huang, Y. L. Si, B. Huang, and W. Li}
+%&\vspace{-2.5em}\href{materials/abstract/55.pdf}{55.pdf} 
+& \href{run:materials/slides/session06/6-4.pdf}{\hphantom{0}6-4.pdf}\newline\vspace{-2.5em}\href{run:materials/slides/session06/6-4.pdf}{\hphantom{0}6-4.pdf\hphantom{x.}}\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}7.1 & \href[page=59]{materials/handbook/full.pdf}{The study on SPH method with space variable smoothing length and its applications to multi-phase flow. \newline W. K. Shi, Y. M. Shen , J. Q. Chen}
+%&\vspace{-2.5em}\href{materials/abstract/15.pdf}{15.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session07/7-1.pdf}{\hphantom{0}7-1.pdf}\\
+\hline
+\vspace{-2.5em}7.2 & \href[page=60]{materials/handbook/full.pdf}{A dynamic refinement strategy in SPH for simulating the water entry of an elastomer. \newline L. Wang, F. Xu, Y. Yang}
+%&\vspace{-2.5em}\href{materials/abstract/29.pdf}{29.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session07/7-2.pdf}{\hphantom{0}7-2.pdf}\\
+\hline
+\vspace{-1.5em}7.3 & \href[page=61]{materials/handbook/full.pdf}{Adaptive particle splitting in the finite volume particle method. \newline Nathan J. Quinlan}
+%&\vspace{-1.5em}\href{materials/abstract/12.pdf}{12.pdf} 
+& \vspace{-1.5em}/\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-1.5em}8.1 & \href[page=62]{materials/handbook/full.pdf}{Modeling the melting process of quartz glass using SPH method. \newline Z. Y. Liu, Q. L. Ma, H. S. Fang}
+%&\vspace{-1.5em}\href{materials/abstract/25.pdf}{25.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session08/8-1.pdf}{\hphantom{0}8-1.pdf}\\
+\hline
+\vspace{-2.5em}8.2 & \href[page=63]{materials/handbook/full.pdf}{Study on dynamic behaviors of liquid-filled flexible multibody systems under the low-gravity environment. \newline W. Z. Kong, Q. Tian}
+%&\vspace{-2.5em}\href{materials/abstract/38.pdf}{38.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session08/8-2.pdf}{\hphantom{0}8-2.pdf}\\
+\hline
+\vspace{-1.5em}8.3 & \href[page=64]{materials/handbook/full.pdf}{A SPH model for the root system of plants. \newline Matthias Mimault, Lionel Dupuy, Mariya Ptashnyk}
+%&\vspace{-1.5em}\href{materials/abstract/03.pdf}{03.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session08/8-3.pdf}{\hphantom{0}8-3.pdf}\\
+\hline
+\vspace{-1.5em}8.4 & \href[page=65]{materials/handbook/full.pdf}{SPH simulation of drop impact on a hot wall with vaporization effects. \newline X. F. Yang, S. C. Kong, M. B. Liu}
+%&\vspace{-2.5em}\href{materials/abstract/09.pdf}{09.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session08/8-4.pdf}{\hphantom{0}8-4.pdf}\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}9.1 & \href[page=66]{materials/handbook/full.pdf}{Developing an Extensible, Portable, Scalable Toolkit for massively parallel Incompressible Smoothed Particle Hydrodynamics (ISPH). \newline X. H. Guo, Benedict D. Rogers, Steven Lind, Peter K. Stansby}
+%&\vspace{-2.5em}\href{materials/abstract/11.pdf}{11.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session09/9-1.pdf}{\hphantom{0}9-1.pdf}\\
+\hline
+\vspace{-1.5em}9.2 & \href[page=68]{materials/handbook/full.pdf}{Three-dimensional sloshing simulations by using GPU-based MPS method. \newline X. Chen, X. Wen, D. C. Wan}
+%&\vspace{-2.5em}\href{materials/abstract/39.pdf}{39.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session09/9-2.pdf}{\hphantom{0}9-2.pdf}\\
+\hline
+\vspace{-2.5em}9.3 & \href[page=69]{materials/handbook/full.pdf}{GPU-based SPH modeling of flood with floating bodies in urban layouts including underground spaces. \newline J. S. Wu, N. Li, W. Y. Liu, H. Zhang}
+%&\vspace{-1.5em}\href{materials/abstract/03.pdf}{03.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session09/9-3.pdf}{\hphantom{0}9-3.pdf}\\
+\hline
+\vspace{-2.5em}9.4 & Improve the effectively of computational fluid dynamics work based on supercomputing cloud. \newline N. Qiao
+%&\vspace{-2.5em}\href{materials/abstract/09.pdf}{09.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session09/9-4.pdf}{\hphantom{0}9-4.pdf}\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}10.1 & \href[page=70]{materials/handbook/full.pdf}{SPH energy balance during the generation and propagation of gravity waves. \newline Domenico Davide Meringolo, Y. Liu, A. Colagrossi}
+%&\vspace{-2.5em}\href{materials/abstract/43.pdf}{43.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-1.5em}10.2 & \href[page=72]{materials/handbook/full.pdf}{Water hammer analysis using SPH in density summation form. \newline D. Q. Hou, C. Y. Huang, M. L. Wang, H. F. Duan}
+%&\vspace{-1.5em}\href{materials/abstract/49.pdf}{49.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session10/10-2.pdf}{10-2.pdf}\\
+\hline
+\vspace{-1.5em}10.3 & \href[page=73]{materials/handbook/full.pdf}{Particle trajectory calculation in SPH. \newline J. Y. Shen, W. H. Lu, D. Q. Hou, Arris S. Tijsseling}
+%&\vspace{-1.5em}\href{materials/abstract/52.pdf}{52.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session10/10-3.pdf}{10-3.pdf}\\
+\hline
+\vspace{-1.5em}10.4 & \href[page=74]{materials/handbook/full.pdf}{Simulating shock waves with corrective smoothed particle method (CSPM). \newline C. Y. Huang, J. Deng, D. Q. Hou, Arris S. Tijsseling}
+%&\vspace{-2.5em}\href{materials/abstract/50.pdf}{50.pdf} 
+& \vspace{-1.5em}/\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-1.5em}11.1 & \href[page=75]{materials/handbook/full.pdf}{SPH modeling of fluid-structure interaction (FSI). \newline L. H. Han, X. Y. Hu}
+%&\vspace{-1.5em}\href{materials/abstract/07.pdf}{07.pdf} 
+& \vspace{-1.5em}/\\
+\hline
+\vspace{-2.5em}11.2 & \href[page=76]{materials/handbook/full.pdf}{Numerical modeling of 2D complex movement patterns to FSI problems using smoothed particle hydrodynamics. \newline C. Zhuang, D. A. Hu, T. Long, G. Yang}
+%&\vspace{-2.5em}\href{materials/abstract/42.pdf}{42.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-2.5em}11.3 & \href[page=77]{materials/handbook/full.pdf}{Implement of the MPS-FEM coupled method for the FSI simulation of the 3-D dam-break problem. \newline Y. L. Zhang, D. C. Wan}
+%&\vspace{-2.5em}\href{materials/abstract/19.pdf}{19.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session11/11-3.pdf}{11-3.pdf}\\
+\hline
+\vspace{-2.5em}11.4 & \href[page=78]{materials/handbook/full.pdf}{A new numerical method for SPH fluid-solid coupling simulation and its preliminary verification. \newline X. J. Ma, Geni Mamtimin, A. F. Jin}
+%&\vspace{-2.5em}\href{materials/abstract/45.pdf}{45.pdf} 
+& \vspace{-2.5em}/\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}12.1 & \href[page=79]{materials/handbook/full.pdf}{An enhanced ISPH-SPH coupled method for incompressible fluid-elastic structure interactions. Abbas Khayyer, Hitoshi Gotoh, Yuma Shimizu, Hosein Falahaty}
+%&\vspace{-2.5em}\href{materials/abstract/02.pdf}{02.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-2.5em}12.2 & \href[page=81]{materials/handbook/full.pdf}{Interaction between solitary wave and flexible plate based on MPS-FEM coupled method. \newline C. P. Rao, D. C. Wan}
+%&\vspace{-2.5em}\href{materials/abstract/17.pdf}{17.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session12/12-2.pdf}{12-2.pdf}\\
+\hline
+\vspace{-2.5em}12.3 & \href[page=82]{materials/handbook/full.pdf}{Modeling of single film bubble and numerical study of the plateau structure in foam system. \newline Z. G. Sun, N. Ni, Y. J. Sun, G. Xi}
+%&\vspace{-2.5em}\href{materials/abstract/27.pdf}{27.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-2.5em}12.4 & \href[page=83]{materials/handbook/full.pdf}{Numerical simulation of Rayleigh-Taylor instability by MPS multiphase method. \newline X. Wen, D. C. Wan}
+%&\vspace{-2.5em}\href{materials/abstract/18.pdf}{18.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session12/12-4.pdf}{12-4.pdf}\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}13.1 & \href[page=84]{materials/handbook/full.pdf}{Numerical simulation of particle collision and breakup behavior by SDPH-FVM coupling method. \newline H. F. Qiang, F. Z. Chen}
+%&\vspace{-2.5em}\href{materials/abstract/35.pdf}{35.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session13/13-1.pdf}{13-1.pdf}\\
+\hline
+\vspace{-1.5em}13.2 & \href[page=85]{materials/handbook/full.pdf}{A physics evoked meshfree method. \newline Z. B. Ma, Y. Z. Zhao}
+%&\vspace{-1.5em}\href{materials/abstract/56.pdf}{56.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session13/13-2.pdf}{13-2.pdf}\\
+\hline
+\vspace{-1.5em}13.3 & \href[page=86]{materials/handbook/full.pdf}{Suppression of non-physical voids in the finite volume particle method. \newline Mohsen H. Moghimi, Nathan J. Quinlan}
+%&\vspace{-2.5em}\href{materials/abstract/13.pdf}{13.pdf} 
+& \vspace{-1.5em}/\\
+\hline
+\vspace{-1.5em}13.4 & \href[page=88]{materials/handbook/full.pdf}{The Hermit-type RRKPM for piezoelectric materials. \newline J. C. Ma, G. F. Wei}
+%&\vspace{-1.5em}\href{materials/abstract/23.pdf}{23.pdf} 
+& \vspace{-1.5em}/\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}14.1 & \href[page=89]{materials/handbook/full.pdf}{A development of a SPH model for simulation of abrasive-water-jet impacting on a metallic surface. \newline X. W. Dong, Z. L. Li, J. L. Liu}
+%&\vspace{-2.5em}\href{materials/abstract/47.pdf}{47.pdf} 
+& \vspace{-2.5em}/\\
+\hline
+\vspace{-1.5em}14.2 & \href[page=90]{materials/handbook/full.pdf}{SPH simulation of Couette flow with sinusoidally moving solid boundary. \newline H. Q. Li, H. T. Liu, J. Z. Chang}
+%&\vspace{-1.5em}\href{materials/abstract/34.pdf}{34.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session14/14-2.pdf}{14-2.pdf}\\
+\hline
+\vspace{-2.5em}14.3 & \href[page=92]{materials/handbook/full.pdf}{Application of particle-based computational acoustics to sound propagation and scattering. \newline Y. O. Zhang}
+%&\vspace{-2.5em}\href{materials/abstract/54.pdf}{54.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session14/14-3.pdf}{14-3.pdf}\\
+\hline
+\vspace{-1.5em}14.4 & \href[page=93]{materials/handbook/full.pdf}{Image processing with the SPH method. \newline C. Y. Huang, W. H. Lu, D. Q. Hou, X. Cheng}
+%&\vspace{-1.5em}\href{materials/abstract/51.pdf}{51.pdf} 
+& \vspace{-1.5em}/\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-2.5em}15.1 & \href[page=94]{materials/handbook/full.pdf}{Analysis of the hydrological safety of dams using numerical tools: Iber and DualSPHysics. J. González-Cao, O. García-Feal, A. J. C. Crespo, J. M. Domínguez, M. Gómez-Gesteira}
+%&\vspace{-2.5em}\href{materials/abstract/08.pdf}{08.pdf} 
+& \vspace{-2.5em}\href{run:materials/slides/session15/15-1.pdf}{15-1.pdf}\\
+\hline
+\vspace{-1.5em}15.2 & \href[page=96]{materials/handbook/full.pdf}{Construction of two-dimensional SPH numerical wave tank. \newline J. Y. Wang, F. Xu, Y. Yang}
+%&\vspace{-1.5em}\href{materials/abstract/28.pdf}{28.pdf} 
+& \vspace{-1.5em}/\\
+\hline
+\vspace{-1.5em}15.3 & \href[page=97]{materials/handbook/full.pdf}{An SPH numerical wave-current tank. \newline M. He, H. S. Wang, X. F. Gao, W. H. Xu, Y. Shi}
+%&\vspace{-1.5em}\href{materials/abstract/53.pdf}{53.pdf} 
+& \vspace{-1.5em}\href{run:materials/slides/session15/15-3.pdf}{15-3.pdf}\\
+\hlinewd{1.5pt}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{tabularx}
+
+\section{\href{run:materials/design/}{图文设计}}
+\begin{itemize}
+\item \href{run:materials/design/nametags}{胸牌}：源文件 \href{run:materials/design/nametags/nametags.psd}{nametags.psd} 及工作／与会人员胸牌 \href{materials/design/nametags/personnel.pdf}{personnel.pdf}／\href{materials/design/nametags/participants.pdf}{participants.pdf}。
+\item \href{run:materials/design/awards}{奖状}：源文件 \href{run:materials/design/awards/award.psd}{award.psd} 及 \href{materials/design/awards/best.pdf}{best.pdf}、\href{materials/design/awards/outstanding.pdf}{outstanding.pdf}、\href{materials/design/awards/excellent.pdf}{excellent.pdf}。
+\item \href{run:materials/design/board}{展板}：源文件 \href{run:materials/design/board/board.psd}{board.psd} 及 \href{materials/design/board/board.pdf}{board.pdf}。
+\item \href{run:materials/design/board}{海报}：源文件 \href{run:materials/design/poster/poster.psd}{poster.psd} 及 \href{materials/design/poster/poster.pdf}{poster.pdf}。
+
+\item \href{run:materials/design/board}{布袋}：源文件 \href{run:materials/design/bag/bag.psd}{bag.psd} 及 \href{materials/design/bag/bag.pdf}{bag.pdf}。
+
+\end{itemize}
+
+\begin{comment}
+\section{\href{run:materials/photos/}{会议照片}}
+\begin{itemize}
+\item \href{run:materials/photos/training}{培训}：
+\item \href{run:materials/photos/workshop}{报告}：\href{run:materials/photos/workshop/1stDay}{第一天}、\href{run:materials/photos/workshop/2ndDay}{第二天}和\href{run:materials/photos/workshop/3rdDay}{第三天}
+\item \href{run:materials/photos/banquet}{晚宴}：
+\item \href{run:materials/photos/other}{其它}：
+\end{itemize}
+
+\end{comment}
+\section{\href{run:materials/accounts/}{财务相关}}
+
+\begin{itemize}
+\item 参考：\href{materials/accounts/guide.pdf}{财务办理指南}、\href{materials/accounts/standard.pdf}{北大会议标准}
+\item 预算：\href{materials/accounts/budget-submit.pdf}{会议预算(提交)}、\href{run:materials/accounts/budget.xls}{会议预算(自留)}
+\item 报销：\href{materials/accounts/approval.pdf}{大额审批表}、\href{run:materials/accounts/reimbursement.xlsx}{会议费报销单} 、\href{materials/accounts/signature.pdf}{议签到表}
+\item 决算：\href{run:materials/accounts/final.xlsx}{会议决算(自留)}、\href{run:materials/accounts/registration.xlsx}{注册费详细(自留)}
+\end{itemize}
+
+\section{\href{run:materials/others/}{其它}}
+\begin{itemize}
+\item \href{materials/others/approval.pdf}{教育部批复文件}、\href{materials/others/notice.pdf}{会议通知}、\href{materials/others/news.pdf}{新闻稿}、\href{run:materials/others/preparation.xlsx}{会议筹备分工表}
+\end{itemize}
+
+
+\begin{comment}
+\newpage
+\section{\href{run:materials/works/}{人员分工}}
+\begin{tabularx}{\textwidth}{M{3em}|M{10em}|X}
+\hlinewd{1.5pt}
+\textbf{姓\hphantom{空}名} & \textbf{单\hphantom{空}位} &\textbf{主要负责工作}\\
+\hlinewd{1.5pt}
+\href{mailto:mbliu@pku.edu.cn}{刘谋斌} &北京大学&  全局统筹、会议网站、..............................................................\\
+\hline
+\href{mailto:huangcancan@163.com}{黄\hphantom{空}灿} & 浙江大学 & 统筹规划、论文集制作、\\
+\hlinewd{1.5pt}
+杨朋英& 北京大学 & 签到收费，财务账目、......\\
+\hline
+& &\\
+\hline
+& &\\
+\hline
+& &\\
+\hline
+& &\\
+\hline
+& &\\
+%\href{mailto:zhou.lv.wen@gmail.com}{周吕文} & 中国科学院大学 & \\%会议手册制作、会议设备调试、签到材料发放、会后材料整理、会后经验总结\\
+\hlinewd{1.5pt}
+\end{tabularx}
+
+%\section{参会人员}
+
+
+%\subsection*{Session 1: Maritime and Naval Architecture Applications}
+%\subsection*{Session 2: Multiple Continua and Multi-Phase Flows}
+%\subsection*{Session 3: Impacts with Fluids or Solids}
+%\subsection*{Session 4: Free Surface and Moving Boundaries Applications}
+%\subsection*{Session 5: Geotechnical Applications}
+%\subsection*{Session 6: Hydraulic Applications I}
+\end{comment}
+
+
+
+
+\end{document}
